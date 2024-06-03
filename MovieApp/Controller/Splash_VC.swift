@@ -13,11 +13,22 @@ class Splash_VC: UIViewController {
 
     @IBOutlet weak var splashLabel: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        var network = NetworkMonitor.shared
+        setupRemoteConfigDefaults()
+        updateSplashLabelValue()
+        fetchRemoteConfig()
+        
+        // Do any additional setup after loading the view.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.checkNetworkAndProceed()
+        }
+    }
+    
     func updateSplashLabelValue(){
         let splashLabelText = RemoteConfig.remoteConfig().configValue(forKey: "splash_text").stringValue ?? ""
         splashLabel.text = splashLabelText
-        
-        let constraintVal = RemoteConfig.remoteConfig()
     }
     
     func setupRemoteConfigDefaults(){
@@ -43,19 +54,6 @@ class Splash_VC: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        var network = NetworkMonitor.shared
-        
-        setupRemoteConfigDefaults()
-        updateSplashLabelValue()
-        fetchRemoteConfig()
-        
-        // Do any additional setup after loading the view.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            self.checkNetworkAndProceed()
-        }
-    }
     func splash() {
         self.performSegue(withIdentifier: "splashSegue", sender: self)
     }
