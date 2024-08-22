@@ -17,7 +17,6 @@
 		11E115E22C09E06B00C0194A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E115E12C09E06B00C0194A /* SceneDelegate.swift */; };
 		11E115E92C09E06C00C0194A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11E115E82C09E06C00C0194A /* Assets.xcassets */; };
 		11E115F52C09E0FF00C0194A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 11E115F42C09E0FF00C0194A /* Alamofire */; };
-		11E115F72C09E0FF00C0194A /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 11E115F62C09E0FF00C0194A /* AlamofireDynamic */; };
 		11E115FA2C09E14000C0194A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 11E115F92C09E14000C0194A /* SwiftyJSON */; };
 		11E115FE2C09E33500C0194A /* Search_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E115FD2C09E33500C0194A /* Search_VC.swift */; };
 		11E116002C09E34900C0194A /* Movies_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E115FF2C09E34900C0194A /* Movies_VC.swift */; };
@@ -71,7 +70,6 @@
 				11E115FA2C09E14000C0194A /* SwiftyJSON in Frameworks */,
 				114859122C0B37F1000A7472 /* Pods_MovieApp.framework in Frameworks */,
 				11E115F52C09E0FF00C0194A /* Alamofire in Frameworks */,
-				11E115F72C09E0FF00C0194A /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +186,6 @@
 			name = MovieApp;
 			packageProductDependencies = (
 				11E115F42C09E0FF00C0194A /* Alamofire */,
-				11E115F62C09E0FF00C0194A /* AlamofireDynamic */,
 				11E115F92C09E14000C0194A /* SwiftyJSON */,
 			);
 			productName = MovieApp;
@@ -562,11 +559,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 11E115F32C09E0FF00C0194A /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		11E115F62C09E0FF00C0194A /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 11E115F32C09E0FF00C0194A /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
 		};
 		11E115F92C09E14000C0194A /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
